@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+/*Custom CSS*/
+
+*
+{
+  font-family: 'Lato', sans-serif;
+}
+
+.nav li a{
+  color: #212121;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.custom_tooltip{
+  position: absolute;
+  background: #f8f8f8;
+  top: 55px;
+  right: 10px;
+  border: 2px solid #2d2d2d;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-color: #ffffff;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.user{
+  width: 8%;
+  float: right;
+  margin: 15px;
+  border: 1px solid #0f0f0f;
+  border-radius: 50px;
+}
+
+.settings_head{
+  list-style: none;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  color: #000000;
+}
+
+.settings_head li{
+  padding: 10px 15px;
+  color: #000000;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+.settings_head li a:hover{
+  text-decoration: none;
+}
+
+.settings_head li:hover{
+  background: #ffa500;
+  border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.btn_read{
+  float: right;
+    background: #2d2d2d;
+    border-radius: 2px;
+    border: 1px solid #212121;
+    padding: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    transition: .5s;
+}
+
+.breadcrumb_custom
+{
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #3a3a3a;
+  border-radius: 0.25rem;
+  color: #ffffff;
+}
+
+.breadcrumb_custom p
+{
+  margin: 0;
+}
+
+.btn_approve{
+    background: green;
+    border-radius: 2px;
+    border: none;
+    padding: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn_reject{
+  background: red;
+    border-radius: 2px;
+    border: 1px solid #212121;
+    padding: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn_custom{
+  background: #2d2d2d;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    border: 1px solid #212121;
+    padding: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.carousel_img
+{
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.carousel_img:hover
+{
+  transform: scale(1.05);
+  transition: .5s;
+}
+
+.s_status
+{
+  padding: 5px;
+  border: 1px solid #0f0f0f;
+  border-radius: 5px;
+}
+
+.list_divider
+{
+  height: 15px;
+    color: #4b646f;
+    background: #1a2226;
+}
+
+.signout
+{
+  cursor: pointer;
+  background: #d50000;
+}
+
+.signout:hover
+{
+  background: #d50000;
+}

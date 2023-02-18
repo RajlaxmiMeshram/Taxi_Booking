@@ -1,0 +1,6 @@
+title - header.php
+favicon
+Database Name. Also in connection.php file
+Sidebar Configuration (with $page & href)
+footer.php - comapany name
+don't touch main.css file. If you want custom styles create own stylesheet and link in header.php
