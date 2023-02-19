@@ -182,14 +182,7 @@
                     data-constraints="@NotEmpty @Required @AlphaSpecial"
                   />
                 </div>
-                <!-- <div class="tmInput">
-                  <input
-                    name="From"
-                    placeholder="From:"
-                    type="text"
-                    data-constraints="@NotEmpty @Required "
-                  />
-                </div> -->
+               
               </div>
               <div class="fl1">
                 <div class="tmInput">
@@ -200,14 +193,7 @@
                     data-constraints="@NotEmpty @Required @Email"
                   />
                 </div>
-                <!-- <div class="tmInput mr0">
-                  <input
-                    name="To"
-                    placeholder="To:"
-                    type="text"
-                    data-constraints="@NotEmpty @Required"
-                  />
-                </div> -->
+               
               </div>
               <div class="clear"></div>
               <strong>Time</strong>
