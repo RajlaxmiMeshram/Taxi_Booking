@@ -306,22 +306,25 @@ $conn->close();
               <div class="tmRadio">
                 <p><em>Comfort</em>&nbsp<span style="color:red;" class="error">*<?php echo $comforErr;?></span></p> 
                 <input
-                  name="scomfort"
+                  name="scomfort" <?php if (isset($scomfort) && $scomfort=="cheap") echo "checked";?>
+                  value="cheap"
                   type="radio"
                   id="tmRadio0"
                   data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])'
-                  checked
+                 
                 />
                 <span>Cheap</span>
                 <input
-                  name="Comfort"
+                name="scomfort" <?php if (isset($scomfort) && $scomfort=="Standard") echo "checked";?>
+                  value="Standard"
                   type="radio"
                   id="tmRadio1"
                   data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])'
                 />
-                <span>Standart</span>
+                <span>Standard</span>
                 <input
-                  name="Comfort"
+                name="scomfort" <?php if (isset($scomfort) && $scomfort=="lux") echo "checked";?>
+                  value="Lux"
                   type="radio"
                   id="tmRadio2"
                   data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])'
@@ -338,7 +341,7 @@ $conn->close();
                   data-class="tmSelect tmSelect2"
                   data-constraints=""
                 >
-                  <option>1</option>
+                  <option>0</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
