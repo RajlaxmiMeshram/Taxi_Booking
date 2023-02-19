@@ -280,7 +280,7 @@ $conn->close();
               </div>
               <div class="clear"></div>
               <strong>Time</strong>
-              <span style="color:red;" class="error">*<?php echo $timeErr;?></span>
+              <span style="color:red;" class="error">*<?php echo $TimeErr;?></span>
               <div class="tmInput">
               
                 <input
@@ -292,7 +292,7 @@ $conn->close();
               </div>
               <div class="clear"></div>
               <strong>Date</strong>
-              <span style="color:red;" class="error">*<?php echo $timeErr;?></span>
+              <span style="color:red;" class="error">*<?php echo $DateErr;?></span>
               <label class="tmDatepicker">
                 <input
                   type="text"
@@ -304,7 +304,7 @@ $conn->close();
               <div class="clear"></div>
               
               <div class="tmRadio">
-                <p><em>Comfort</em>&nbsp<span style="color:red;" class="error">*<?php echo $timeErr;?></span></p> 
+                <p><em>Comfort</em>&nbsp<span style="color:red;" class="error">*<?php echo $comforErr;?></span></p> 
                 <input
                   name="scomfort"
                   type="radio"
@@ -330,7 +330,7 @@ $conn->close();
               </div>
               <div class="clear"></div>
               <div class="fl1 fl2">
-              <span style="color:red;" class="error">*<?php echo $timeErr;?></span>
+              <span style="color:red;" class="error">*<?php echo $AdultErr;?></span>
                 <em>Adults</em>
                 <select
                   name="sadult"
@@ -346,7 +346,7 @@ $conn->close();
                 <div class="clear height1"></div>
               </div>
               <div class="fl1 fl2">
-              <span style="color:red;" class="error">*<?php echo $timeErr;?></span>
+              <span style="color:red;" class="error">*<?php echo $ChildErr;?></span>
                 <em>Children</em>
                 <select
                   name="schildren"
@@ -361,7 +361,9 @@ $conn->close();
                 </select>
               </div>
               <div class="clear"></div>
+              <label for="exampleInputEmail3">Message</label>
               <div class="tmTextarea">
+             
                 <textarea
                   name="Message"
                   placeholder="smessage"
