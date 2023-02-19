@@ -15,20 +15,27 @@
         </a>
       </li>
       <li <?php if($page=="#") { ?>  class="active nav-item" <?php } else { ?>  class="nav-item" <?php } ?>>
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="adddriver.php">
           <div class="wrapped">
             <i class="fas fa-fw fa-folder"></i>&nbsp;&nbsp;&nbsp;
-            <span>Page 1</span>
+            <span>Add Driver</span>
           </div></a>
       </li>
       <li <?php if($page=="#") { ?>  class="active nav-item" <?php } else { ?>  class="nav-item" <?php } ?>>
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="addrider.php">
           <div class="wrapped">
             <i class="fas fa-fw fa-folder"></i>&nbsp;&nbsp;&nbsp;
-            <span>Page 2</span>
+            <span>Add Rider</span>
           </div></a>
       </li>
-      <li class="nav-item dropdown">
+      <li <?php if($page=="#") { ?>  class="active nav-item" <?php } else { ?>  class="nav-item" <?php } ?>>
+        <a class="nav-link" href="addLocation.php">
+          <div class="wrapped">
+            <i class="fas fa-fw fa-folder"></i>&nbsp;&nbsp;&nbsp;
+            <span>Add Location</span>
+          </div></a>
+      </li>
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>&nbsp;&nbsp;&nbsp;
             <span>Dropdown</span></a>
@@ -44,12 +51,19 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="cardview.php">Card, Button & Modal</a>
         </div>
+      </li> -->
+      <li <?php if($page=="#") { ?>  class="active nav-item" <?php } else { ?>  class="nav-item" <?php } ?>>
+        <a class="nav-link" href="showrider.php">
+          <div class="wrapped">
+            <i class="fas fa-fw fa-folder"></i>&nbsp;&nbsp;&nbsp;
+            <span>Show Rider</span>
+          </div></a>
       </li>
       <li <?php if($page=="#") { ?>  class="active nav-item" <?php } else { ?>  class="nav-item" <?php } ?>>
         <a class="nav-link" href="#">
           <div class="wrapped">
             <i class="fas fa-fw fa-folder"></i>&nbsp;&nbsp;&nbsp;
-            <span>Page 3</span>
+            <span>Show Driver</span>
           </div></a>
       </li>
 
