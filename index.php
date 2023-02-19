@@ -21,34 +21,36 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 
-if (empty($_POST["name"])) {
+if (empty($_POST["sname"])) {
   $nameErr = "Name is required";
 } else {
-  $name = test_input($_POST["name"]);
+  $sname = test_input($_POST["sname"]);
   // check if name only contains letters and whitespace
-  if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+  if (!preg_match("/^[a-zA-Z-' ]*$/",$sname)) {
     $nameErr = "Only letters and white space allowed";
   }
 }
 
-if (empty($_POST["email"])) 
+if (empty($_POST["semail"])) 
 {
     $emailErr = "Email is required";
   } else 
   {
-   $email = test_input($_POST["email"]);
+   $semail = test_input($_POST["semail"]);
     // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+    if (!filter_var($semail, FILTER_VALIDATE_EMAIL)) 
     {
       $emailErr = "Invalid email format";
     }
   }
   
-  if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
+  if (empty($_POST["scomfort"])) {
+    $genderErr = "Comfort is required";
   } else {
-    $gender = test_input($_POST["gender"]);
-    $city = test_input($_POST["city"]);
+    $scomfort = test_input($_POST["scomfort"]);
+    $smessage = test_input($_POST["smessage"]);
+    $stime=test_input($_POST["stime"]);
+    $sdate=test_input($_POST["sdate"]);
 
 //sid	sname	semail	stime	sdate	scomfort	sadult	schildren	smessage
     $sql = "INSERT INTO add_booking(sname,	semail,	stime,sdate,	scomfort	,sadult,	schildren,smessage) values('".$sname."','".$semail."','".$stime."','".$sdate."','".$scomfort."','".$sadult."','".$schildren."','".$smessage."',)";
@@ -261,7 +263,7 @@ $conn->close();
                     name="sname"
                     placeholder="Name:"
                     type="text"
-                    data-constraints="@NotEmpty @Required @AlphaSpecial"
+                
                   />
                 </div>
                
@@ -273,7 +275,7 @@ $conn->close();
                     name="semail"
                     placeholder="Email:"
                     type="text"
-                    data-constraints="@NotEmpty @Required @Email"
+                   
                   />
                 </div>
                
@@ -287,7 +289,7 @@ $conn->close();
                   name="stime"
                   placeholder=""
                   type="text"
-                  data-constraints="@NotEmpty @Required"
+               
                 />
               </div>
               <div class="clear"></div>
@@ -298,7 +300,7 @@ $conn->close();
                   type="text"
                   name="sdate"
                   placeholder="20/05/2014"
-                  data-constraints="@NotEmpty @Required @Date"
+               
                 />
               </label>
               <div class="clear"></div>
@@ -310,7 +312,7 @@ $conn->close();
                   value="cheap"
                   type="radio"
                   id="tmRadio0"
-                  data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])'
+                  
                  
                 />
                 <span>Cheap</span>
@@ -319,7 +321,7 @@ $conn->close();
                   value="Standard"
                   type="radio"
                   id="tmRadio1"
-                  data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])'
+                 
                 />
                 <span>Standard</span>
                 <input
@@ -327,19 +329,19 @@ $conn->close();
                   value="Lux"
                   type="radio"
                   id="tmRadio2"
-                  data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])'
+                  
                 />
                 <span>Lux</span>
               </div>
               <div class="clear"></div>
               <div class="fl1 fl2">
-              <span style="color:red;" class="error">*<?php echo $AdultErr;?></span>
+              <!-- <span style="color:red;" class="error">*</span> -->
                 <em>Adults</em>
                 <select
                   name="sadult"
                   class="tmSelect auto"
                   data-class="tmSelect tmSelect2"
-                  data-constraints=""
+                 
                 >
                   <option>0</option>
                   <option>1</option>
@@ -349,13 +351,13 @@ $conn->close();
                 <div class="clear height1"></div>
               </div>
               <div class="fl1 fl2">
-              <span style="color:red;" class="error">*<?php echo $ChildErr;?></span>
+              <!-- <span style="color:red;" class="error">*<</span> -->
                 <em>Children</em>
                 <select
                   name="schildren"
                   class="tmSelect auto"
                   data-class="tmSelect tmSelect2"
-                  data-constraints=""
+                  
                 >
                   <option>0</option>
                   <option>0</option>
@@ -370,7 +372,7 @@ $conn->close();
                 <textarea
                   name="Message"
                   placeholder="smessage"
-                  data-constraints="@NotEmpty @Required @Length(min=20,max=999999)"
+                 
                 ></textarea>
               </div>
               <a href="#" class="btn" data-type="submit">Submit</a>
