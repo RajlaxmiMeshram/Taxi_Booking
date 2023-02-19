@@ -50,8 +50,8 @@ if (empty($_POST["email"]))
     $gender = test_input($_POST["gender"]);
     $city = test_input($_POST["city"]);
 
-
-    $sql = "INSERT INTO add_booking(s_name,s_email,s_gender,s_city) values('".$name."','".$email."','".$gender."','".$city ."')";
+//sid	sname	semail	stime	sdate	scomfort	sadult	schildren	smessage
+    $sql = "INSERT INTO add_booking(sname,	semail,	stime,sdate,	scomfort	,sadult,	schildren,smessage) values('".$sname."','".$semail."','".$stime."','".$sdate."','".$scomfort."','".$sadult."','".$schildren."','".$smessage."',)";
 
 
 if ($conn->query($sql) === TRUE) 
