@@ -60,10 +60,17 @@
           </div></a>
       </li>
       <li <?php if($page=="#") { ?>  class="active nav-item" <?php } else { ?>  class="nav-item" <?php } ?>>
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="showdriver.php">
           <div class="wrapped">
             <i class="fas fa-fw fa-folder"></i>&nbsp;&nbsp;&nbsp;
             <span>Show Driver</span>
+          </div></a>
+      </li>
+      <li <?php if($page=="#") { ?>  class="active nav-item" <?php } else { ?>  class="nav-item" <?php } ?>>
+        <a class="nav-link" href="booking.php">
+          <div class="wrapped">
+            <i class="fas fa-fw fa-folder"></i>&nbsp;&nbsp;&nbsp;
+            <span>Booking</span>
           </div></a>
       </li>
 
