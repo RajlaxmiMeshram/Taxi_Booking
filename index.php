@@ -2,7 +2,7 @@
     $nameErr = $emailErr = $genderErr  = $passErr="";
    $name = $email = $gender = $comment =  $pass="";
    
-
+// 	sid	sname	semail	stime	sdate	scomfort	sadult	schildren	smessage
  if ($_SERVER["REQUEST_METHOD"] == "POST") 
  {
 
@@ -139,6 +139,7 @@ $conn->close();
   </head>
   <body class="page1" id="top">
     <div class="main">
+    
       <!--==============================header=================================-->
       <header>
         <div class="menu_block">
@@ -251,11 +252,13 @@ $conn->close();
         <div class="container_12">
           <div class="grid_5">
             <h3>Booking Form</h3>
+            <p><span class="error" style="color:red;" >* required field</span></p>
             <form id="bookingForm">
               <div class="fl1">
                 <div class="tmInput">
+                <label for="exampleInputName1">Name</label>&nbsp <span style="color:red;" class="error">* <?php echo $nameErr;?></span>
                   <input
-                    name="Name"
+                    name="sname"
                     placeholder="Name:"
                     type="text"
                     data-constraints="@NotEmpty @Required @AlphaSpecial"
@@ -265,8 +268,9 @@ $conn->close();
               </div>
               <div class="fl1">
                 <div class="tmInput">
+                <label for="exampleInputEmail3">Email address</label>&nbsp<span style="color:red;" class="error">* <?php echo $emailErr;?></span>
                   <input
-                    name="Email"
+                    name="semail"
                     placeholder="Email:"
                     type="text"
                     data-constraints="@NotEmpty @Required @Email"
@@ -276,9 +280,11 @@ $conn->close();
               </div>
               <div class="clear"></div>
               <strong>Time</strong>
+              <span style="color:red;" class="error">*<?php echo $timeErr;?></span>
               <div class="tmInput">
+              
                 <input
-                  name="Time"
+                  name="stime"
                   placeholder=""
                   type="text"
                   data-constraints="@NotEmpty @Required"
@@ -286,19 +292,21 @@ $conn->close();
               </div>
               <div class="clear"></div>
               <strong>Date</strong>
+              <span style="color:red;" class="error">*<?php echo $timeErr;?></span>
               <label class="tmDatepicker">
                 <input
                   type="text"
-                  name="Date"
+                  name="sdate"
                   placeholder="20/05/2014"
                   data-constraints="@NotEmpty @Required @Date"
                 />
               </label>
               <div class="clear"></div>
+              
               <div class="tmRadio">
-                <p>Comfort</p>
+                <p><em>Comfort</em>&nbsp<span style="color:red;" class="error">*<?php echo $timeErr;?></span></p> 
                 <input
-                  name="Comfort"
+                  name="scomfort"
                   type="radio"
                   id="tmRadio0"
                   data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])'
@@ -322,9 +330,10 @@ $conn->close();
               </div>
               <div class="clear"></div>
               <div class="fl1 fl2">
+              <span style="color:red;" class="error">*<?php echo $timeErr;?></span>
                 <em>Adults</em>
                 <select
-                  name="Adults"
+                  name="sadult"
                   class="tmSelect auto"
                   data-class="tmSelect tmSelect2"
                   data-constraints=""
@@ -337,9 +346,10 @@ $conn->close();
                 <div class="clear height1"></div>
               </div>
               <div class="fl1 fl2">
+              <span style="color:red;" class="error">*<?php echo $timeErr;?></span>
                 <em>Children</em>
                 <select
-                  name="Children"
+                  name="schildren"
                   class="tmSelect auto"
                   data-class="tmSelect tmSelect2"
                   data-constraints=""
@@ -354,7 +364,7 @@ $conn->close();
               <div class="tmTextarea">
                 <textarea
                   name="Message"
-                  placeholder="Message"
+                  placeholder="smessage"
                   data-constraints="@NotEmpty @Required @Length(min=20,max=999999)"
                 ></textarea>
               </div>
