@@ -1,3 +1,82 @@
+<?php
+    $nameErr = $emailErr = $genderErr  = $passErr="";
+   $name = $email = $gender = $comment =  $pass="";
+   
+
+ if ($_SERVER["REQUEST_METHOD"] == "POST") 
+ {
+
+  $servername = "localhost";
+$username = "root";
+$password = "";
+$database = "taxed";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password,$database,3308);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+
+
+if (empty($_POST["name"])) {
+  $nameErr = "Name is required";
+} else {
+  $name = test_input($_POST["name"]);
+  // check if name only contains letters and whitespace
+  if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+    $nameErr = "Only letters and white space allowed";
+  }
+}
+
+if (empty($_POST["email"])) 
+{
+    $emailErr = "Email is required";
+  } else 
+  {
+   $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+    {
+      $emailErr = "Invalid email format";
+    }
+  }
+  
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+    $city = test_input($_POST["city"]);
+
+
+    $sql = "INSERT INTO add_booking(s_name,s_email,s_gender,s_city) values('".$name."','".$email."','".$gender."','".$city ."')";
+
+
+if ($conn->query($sql) === TRUE) 
+{
+  echo "insertion created successfully" ;
+} else 
+{
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+  }
+
+$conn->close();
+
+          
+    }
+
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+    
+    ?> 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
