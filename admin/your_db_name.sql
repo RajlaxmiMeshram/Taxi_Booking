@@ -41,7 +41,7 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`sr_Id`, `adm_Id`, `adm_name`, `adm_username`, `adm_password`, `adm_status`, `adm_type`) VALUES
-(1, 'adm_1', 'Admin', 'admin@google.com', 'c3fb37909d398f646387bef207be49b4', 'Active', 'Super');
+(1, 'adm_1', 'Admin', 'admin@gmail.com', 'c3fb37909d398f646387bef207be49b4', 'Active', 'Super');
 
 --
 -- Indexes for dumped tables
